@@ -6,6 +6,9 @@ import { BackendURL } from "./component/backendURL";
 import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
+import Registro from "./pages/registro.jsx";
+import Login from "./pages/login.jsx";
+import VistaUsuario from "./pages/vistaUsuario.jsx";
 import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
@@ -25,7 +28,10 @@ const Layout = () => {
                 <ScrollToTop>
                     <Navbar />
                     <Routes>
-                        <Route element={<Home />} path="/" />
+                        <Route element={<Login />} path="/" />
+                        <Route element={<Registro />} path="/registro" />   
+                        <Route element={<Login />} path="/login" />
+                        <Route element={<VistaUsuario />} path="/dataPrivada" />
                         <Route element={<Demo />} path="/demo" />
                         <Route element={<Single />} path="/single/:theid" />
                         <Route element={<h1>Not found!</h1>} />
